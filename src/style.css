@@ -1,0 +1,272 @@
+/*** Reset  ***/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+button {
+  background-color: transparent;
+  color: inherit;
+  border-width: 0;
+  padding: 0;
+  cursor: pointer;
+}
+figure {
+  margin: 0;
+}
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+ul,
+ol,
+dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+p {
+  margin: 0;
+}
+cite {
+  font-style: normal;
+}
+fieldset {
+  border-width: 0;
+  padding: 0;
+  margin: 0;
+}
+img {
+  max-width: 100%;
+}
+/*** Typography ***/
+html {
+  font-size: 62.5%; /*for using REM units*/
+  height: 100%;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #222;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3.6rem;
+}
+h2 {
+  font-size: 2.65rem;
+}
+h3 {
+  font-size: 2.125rem;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 1.85rem;
+}
+
+:root {
+  --white: #f2f2f2;
+  --black: #222222;
+  --grey: #c1c1c1;
+  --blue: #010059;
+  --mauve: #52437b;
+  --pink: #ff7a8a;
+  --yellow: #fcf594;
+}
+
+body,
+#root,
+.App,
+.Account {
+  height: inherit;
+}
+
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 6rem;
+  padding-left: 6rem;
+  /* for edge cases: */
+  width: 100%;
+  max-width: 1480px;
+}
+
+.App,
+.Header--container,
+.User,
+.User--icon,
+.Account--container,
+.Account--header,
+.Operation {
+  display: flex;
+}
+
+.App {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Header {
+  z-index: 5;
+  background-color: var(--blue);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.Header--container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  align-items: center;
+}
+.Header--logo {
+  flex: auto;
+}
+
+.Logo {
+  color: var(--white);
+}
+
+.Header--user {
+  flex: 1;
+}
+
+.User {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.User--name {
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--white);
+}
+.User--icon {
+  color: var(--blue);
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 50%;
+  margin-left: 2rem;
+}
+.User--icon svg {
+  width: 32px;
+  max-height: 32px;
+}
+
+.Account {
+  background-color: var(--white);
+}
+
+.Account--container {
+  flex-direction: column;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.Account--header {
+  justify-content: space-between;
+  color: var(--white);
+  padding: 2rem;
+  border-radius: 6px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  z-index: 1;
+}
+
+.Account--header-name,
+.Account--header-balance {
+  font-size: 2rem;
+}
+.Account--header-name {
+  font-weight: 700;
+  letter-spacing: 0.085rem;
+}
+.Account--header-balance {
+  letter-spacing: 0.123rem;
+}
+
+.Account--body {
+  margin: 0 2rem;
+}
+
+.Operation {
+  padding: 2rem;
+  border-bottom: 1px solid #c1c1c1;
+  color: var(--blue);
+}
+
+.Operation:nth-child(even) {
+  background-color: var(--yellow);
+}
+.Operation:nth-child(odd) {
+  background-color: #ffffff;
+}
+.Operation:last-child {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.Operation-date {
+  font-weight: 300;
+}
+.Operation-desc {
+  text-transform: uppercase;
+  margin-left: 4rem;
+}
+.Operation-amount {
+  font-weight: 500;
+  margin-left: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  .Logo {
+    font-size: 2rem;
+  }
+  .User--name {
+    font-size: 1.8rem;
+  }
+  .User--icon svg {
+    max-height: 24px;
+    width: 24px;
+  }
+  .Account--body {
+    margin: 0 1rem;
+  }
+  .Operation {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    flex-direction: column;
+  }
+  .Operation-desc {
+    margin: 0;
+  }
+}
