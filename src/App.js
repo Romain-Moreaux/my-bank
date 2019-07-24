@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "./Header";
 import Account from "./Account";
 import accounts from "./accounts.json";
+
 class App extends Component {
   render() {
     return (

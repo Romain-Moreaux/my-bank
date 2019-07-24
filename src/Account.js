@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./Button";
+import Operation from "./Operation";
 
 class Account extends React.Component {
   render = () => {
@@ -16,17 +17,7 @@ class Account extends React.Component {
           <div className="Account--body">
             <ul>
               {this.props.operations.map((operation, index) => {
-                return (
-                  <li className="Operation" key={index}>
-                    <span className="Operation-date">{operation.date}</span>
-                    <span className="Operation-desc">
-                      {operation.description}
-                    </span>
-                    <span className="Operation-amount">
-                      {operation.amount}&euro;
-                    </span>
-                  </li>
-                );
+                return <Operation key={index} operation={operation} />;
               })}
             </ul>
             <Button textContent="see more" type="button" />
