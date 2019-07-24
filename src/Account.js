@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 
 class Account extends React.Component {
   render = () => {
@@ -28,6 +29,7 @@ class Account extends React.Component {
                 );
               })}
             </ul>
+            <Button textContent="see more" type="button" />
           </div>
         </div>
       </section>

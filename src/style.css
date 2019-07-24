@@ -126,6 +126,7 @@ body,
 .User--icon,
 .Account--container,
 .Account--header,
+.Account--body,
 .Operation {
   display: flex;
 }
@@ -213,6 +214,7 @@ body,
 
 .Account--body {
   margin: 0 2rem;
+  flex-direction: column;
 }
 
 .Operation {
@@ -243,6 +245,27 @@ body,
   margin-left: auto;
 }
 
+.Button {
+  align-self: flex-end;
+  display: inline-flex;
+  padding: 1.4rem 2rem;
+  border: 1px solid var(--blue);
+  background-color: var(--blue);
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: 300;
+  border-radius: 25px;
+  margin-top: 3rem;
+  min-height: 48px;
+  font-size: 1.6rem;
+  transition: background 0.35s ease-in-out;
+}
+
+.Button:hover {
+  background-color: var(--white);
+  color: var(--blue);
+}
+
 @media only screen and (max-width: 600px) {
   .wrapper {
     padding-right: 2rem;
@@ -262,11 +285,12 @@ body,
     margin: 0 1rem;
   }
   .Operation {
-    padding-left: 1rem;
-    padding-right: 1rem;
     flex-direction: column;
   }
   .Operation-desc {
     margin: 0;
+  }
+  .Operation-amount {
+    margin-top: -2rem;
   }
 }
